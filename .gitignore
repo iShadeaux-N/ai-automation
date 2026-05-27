@@ -4,3 +4,4 @@ output/
 config/youtube_token.json
 output/
 config/youtube_token.json
+.env
