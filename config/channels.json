@@ -62,7 +62,7 @@
     "best_upload_days": ["Tuesday", "Thursday", "Saturday", "Sunday"],
     "best_upload_time": "6:00 PM",
     "elevenlabs_voice": {
-      "voice_id": "Adam",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
       "speed": 0.90,
       "stability": 75,
       "clarity": 80,
