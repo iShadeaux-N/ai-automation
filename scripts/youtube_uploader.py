@@ -100,7 +100,11 @@ def _next_upload_time(config: dict) -> str:
     target_weekdays = sorted([day_map[d] for d in best_days if d in day_map])
 
     now = datetime.now(timezone.utc)
-    hour, minute = (int(x) for x in best_time.split(":"))
+    try:
+        t = datetime.strptime(best_time, "%I:%M %p")
+    except ValueError:
+        t = datetime.strptime(best_time, "%H:%M")
+    hour, minute = t.hour, t.minute
 
     for offset in range(8):
         candidate = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
