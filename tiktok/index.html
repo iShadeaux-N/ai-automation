@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitDrop — Shop the Look</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#FF2D55',
+            branddark: '#C7002A',
+            surface: '#0F0F0F',
+            card: '#1A1A1A',
+            muted: '#888'
+          },
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0F0F0F; color: #fff; -webkit-font-smoothing: antialiased; }
+    .badge-pulse { animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.6} }
+    .card-hover { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+    .card-hover:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(255,45,85,0.18); }
+    .sticky-cta { box-shadow: 0 -4px 24px rgba(0,0,0,0.5); }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center">
+
+  <!-- ── HEADER ────────────────────────────────── -->
+  <header class="w-full max-w-md px-5 pt-10 pb-4 text-center">
+    <div class="inline-flex items-center gap-2 mb-3">
+      <!-- TikTok-style logo mark -->
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <rect width="32" height="32" rx="8" fill="#FF2D55"/>
+        <path d="M22 8h-3.5v10.5a3 3 0 1 1-3-3v-3.5a6.5 6.5 0 1 0 6.5 6.5V14a9 9 0 0 0 4 .9V11.4A5.5 5.5 0 0 1 22 8z" fill="white"/>
+      </svg>
+      <span class="text-xl font-bold tracking-tight">FitDrop</span>
+    </div>
+    <p class="text-sm text-gray-400 leading-snug">AI-curated fits. Trending daily.<br/>Click any product to shop on TikTok.</p>
+
+    <!-- Social proof bar -->
+    <div class="flex items-center justify-center gap-4 mt-4 text-xs text-gray-500">
+      <span>🔥 2.4k sold this week</span>
+      <span class="text-gray-700">|</span>
+      <span>⭐ 4.8 avg rating</span>
+      <span class="text-gray-700">|</span>
+      <span>✅ TikTok Shop Verified</span>
+    </div>
+  </header>
+
+  <!-- ── TRENDING BANNER ─────────────────────── -->
+  <div class="w-full max-w-md px-5 mb-6">
+    <div class="bg-brand/10 border border-brand/30 rounded-xl px-4 py-3 flex items-center gap-3">
+      <span class="badge-pulse text-brand text-lg">●</span>
+      <div>
+        <p class="text-sm font-semibold text-brand">Trending Right Now</p>
+        <p class="text-xs text-gray-400">Ekko tanks + sweat shorts are selling out. Grab yours before they're gone.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PRODUCT CARDS ───────────────────────── -->
+  <main class="w-full max-w-md px-5 flex flex-col gap-5 pb-32">
+
+    <!-- Product 1: Ekko Tank Top -->
+    <a href="REPLACE_WITH_TIKTOK_SHOP_AFFILIATE_LINK" target="_blank" rel="noopener noreferrer"
+       class="card-hover bg-card rounded-2xl overflow-hidden block border border-white/5">
+      <div class="relative">
+        <img src="https://placehold.co/480x320/1A1A1A/444?text=Ekko+Tank+Top"
+             alt="Ekko Tank Top" class="w-full h-48 object-cover" />
+        <span class="absolute top-3 left-3 bg-brand text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">
+          🔥 Trending
+        </span>
+        <span class="absolute top-3 right-3 bg-black/70 text-white text-xs px-2.5 py-1 rounded-full">
+          #1 This Week
+        </span>
+      </div>
+      <div class="p-4">
+        <div class="flex items-start justify-between gap-2">
+          <div>
+            <h2 class="font-bold text-base leading-tight">Ekko Tank Top</h2>
+            <p class="text-xs text-gray-400 mt-0.5">As seen on your FYP • Sizes XS–3XL</p>
+          </div>
+          <div class="text-right shrink-0">
+            <p class="text-brand font-bold text-lg">$24.99</p>
+            <p class="text-gray-500 text-xs line-through">$39.99</p>
+          </div>
+        </div>
+        <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+          Buttery-soft fabric, minimal design, wears all day. The tank your TikTok has been recommending for a reason.
+        </p>
+        <div class="flex gap-2 mt-3 flex-wrap">
+          <span class="text-[10px] bg-white/5 text-gray-400 px-2 py-1 rounded-full">Size Inclusive</span>
+          <span class="text-[10px] bg-white/5 text-gray-400 px-2 py-1 rounded-full">Free Returns</span>
+          <span class="text-[10px] bg-white/5 text-gray-400 px-2 py-1 rounded-full">Ships in 3-5 days</span>
+        </div>
+        <div class="mt-4 bg-brand rounded-xl py-3 text-center text-sm font-semibold text-white">
+          Shop on TikTok →
+        </div>
+      </div>
+    </a>
+
+    <!-- Product 2: Sweat Shorts -->
+    <a href="REPLACE_WITH_TIKTOK_SHOP_AFFILIATE_LINK" target="_blank" rel="noopener noreferrer"
+       class="card-hover bg-card rounded-2xl overflow-hidden block border border-white/5">
+      <div class="relative">
+        <img src="https://placehold.co/480x320/1A1A1A/444?text=Sweat+Shorts"
+             alt="Sweat Shorts" class="w-full h-48 object-cover" />
+        <span class="absolute top-3 left-3 bg-purple-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">
+          ✨ Fan Favorite
+        </span>
+      </div>
+      <div class="p-4">
+        <div class="flex items-start justify-between gap-2">
+          <div>
+            <h2 class="font-bold text-base leading-tight">Sweat Shorts</h2>
+            <p class="text-xs text-gray-400 mt-0.5">Every GRWM video right now • Unisex fit</p>
+          </div>
+          <div class="text-right shrink-0">
+            <p class="text-brand font-bold text-lg">$29.99</p>
+            <p class="text-gray-500 text-xs line-through">$44.99</p>
+          </div>
+        </div>
+        <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+          Thick, cozy fleece. Elastic waistband. Looks intentional even on a lazy day. Style them up or down — they do the work.
+        </p>
+        <div class="flex gap-2 mt-3 flex-wrap">
+          <span class="text-[10px] bg-white/5 text-gray-400 px-2 py-1 rounded-full">Unisex</span>
+          <span class="text-[10px] bg-white/5 text-gray-400 px-2 py-1 rounded-full">Multiple Colors</span>
+          <span class="text-[10px] bg-white/5 text-gray-400 px-2 py-1 rounded-full">Free Returns</span>
+        </div>
+        <div class="mt-4 bg-brand rounded-xl py-3 text-center text-sm font-semibold text-white">
+          Shop on TikTok →
+        </div>
+      </div>
+    </a>
+
+    <!-- Bundle suggestion card -->
+    <div class="bg-gradient-to-br from-brand/20 to-purple-900/20 border border-brand/20 rounded-2xl p-4">
+      <p class="text-xs font-bold text-brand uppercase tracking-widest mb-1">Bundle Deal</p>
+      <p class="text-sm font-semibold">Tank + Shorts — The Full Fit</p>
+      <p class="text-xs text-gray-400 mt-1">Buy both and save an extra 10% using code <span class="text-white font-mono font-bold">FITDROP10</span> at checkout.</p>
+    </div>
+
+    <!-- Review snippet -->
+    <div class="bg-card border border-white/5 rounded-2xl p-4">
+      <p class="text-xs text-gray-500 uppercase tracking-widest mb-3">What people are saying</p>
+      <div class="flex flex-col gap-3">
+        <div class="flex gap-3 items-start">
+          <img src="https://placehold.co/36x36/333/888?text=A" alt="" class="rounded-full w-9 h-9 shrink-0" />
+          <div>
+            <p class="text-xs font-semibold">@alexfit_</p>
+            <p class="text-xs text-gray-400">"The tank is SO soft. I ordered two more. Wore it to the gym and got 3 compliments 😭"</p>
+            <p class="text-yellow-400 text-xs mt-0.5">★★★★★</p>
+          </div>
+        </div>
+        <div class="flex gap-3 items-start">
+          <img src="https://placehold.co/36x36/333/888?text=M" alt="" class="rounded-full w-9 h-9 shrink-0" />
+          <div>
+            <p class="text-xs font-semibold">@mia.styles</p>
+            <p class="text-xs text-gray-400">"TikTok was right. These shorts are unreal for the price. Wearing them literally every day."</p>
+            <p class="text-yellow-400 text-xs mt-0.5">★★★★★</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ── STICKY CTA BAR ─────────────────────── -->
+  <div class="fixed bottom-0 left-0 right-0 flex justify-center sticky-cta bg-black/90 backdrop-blur-sm py-4 px-5 z-50">
+    <div class="w-full max-w-md flex gap-3 items-center">
+      <div class="flex-1">
+        <p class="text-xs text-gray-400">🔥 Limited stock — trending fast</p>
+        <p class="text-sm font-semibold">Shop the full drop →</p>
+      </div>
+      <a href="https://www.tiktok.com/shop" target="_blank" rel="noopener noreferrer"
+         class="bg-brand hover:bg-branddark text-white text-sm font-bold px-5 py-3 rounded-xl transition-colors shrink-0">
+        TikTok Shop
+      </a>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ─────────────────────────────── -->
+  <footer class="w-full max-w-md px-5 pb-40 text-center">
+    <p class="text-[10px] text-gray-600 leading-relaxed">
+      Some links on this page are affiliate links. FitDrop earns a small commission at no extra cost to you.
+      We only feature products we genuinely recommend. Prices and availability are subject to change.
+    </p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acctual — Small business invoices that get paid faster</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; -webkit-font-smoothing: antialiased; background: #f7fafc; color: #1e1e1e; }
+    .star { color: #f5a623; }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="relative overflow-hidden bg-[#f7fafc] pt-20 pb-0" style="min-height:720px;">
+
+    <!-- Paperclip top-left -->
+    <div class="absolute top-8 left-14 pointer-events-none select-none" style="opacity:0.65;">
+      <svg width="28" height="72" viewBox="0 0 28 72" fill="none">
+        <path d="M14 66 C6 66 2 59 2 52 L2 18 C2 9 7 3 14 3 C21 3 26 9 26 18 L26 48 C26 54 22 57 17 57 C12 57 9 53 9 48 L9 22" stroke="#b0bec5" stroke-width="2" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- Keyboard bottom-left (stylized) -->
+    <div class="absolute bottom-0 left-0 pointer-events-none select-none" style="width:200px; opacity:0.85;">
+      <div class="bg-[#dde3ea] rounded-tr-xl p-3 shadow-inner" style="padding-bottom:0;">
+        <div class="space-y-1.5">
+          <div class="flex gap-1">
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+          </div>
+          <div class="flex gap-1">
+            <div class="h-4 w-6 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+          </div>
+          <div class="flex gap-1">
+            <div class="h-4 w-8 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 w-8 bg-white rounded shadow-sm opacity-90"></div>
+          </div>
+          <div class="flex gap-1">
+            <div class="h-4 w-5 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 w-5 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 flex-1 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 w-5 bg-white rounded shadow-sm opacity-90"></div>
+            <div class="h-4 w-5 bg-white rounded shadow-sm opacity-90"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Books / notepad top-right -->
+    <div class="absolute top-6 right-8 pointer-events-none select-none" style="width:100px;">
+      <div class="relative h-32">
+        <div class="absolute right-0 top-3 w-16 h-24 bg-[#e0e6ee] rounded border border-[#cdd5df] shadow" style="transform:rotate(4deg);"></div>
+        <div class="absolute right-1 top-1 w-16 h-24 bg-white rounded border border-[#d8e0e8] shadow-sm">
+          <div class="p-2 space-y-1.5 pt-3">
+            <div class="h-1 bg-[#eef1f5] rounded w-full"></div>
+            <div class="h-1 bg-[#eef1f5] rounded w-4/5"></div>
+            <div class="h-1 bg-[#eef1f5] rounded w-full"></div>
+            <div class="h-1 bg-[#eef1f5] rounded w-3/4"></div>
+            <div class="h-1 bg-[#eef1f5] rounded w-full"></div>
+            <div class="h-1 bg-[#eef1f5] rounded w-2/3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orange/red box right side -->
+    <div class="absolute top-36 right-12 pointer-events-none select-none">
+      <div class="w-12 h-12 bg-[#d9603a] rounded-xl shadow-lg" style="transform:rotate(-10deg);"></div>
+      <svg class="mt-1 ml-2 opacity-50" width="16" height="24" viewBox="0 0 16 24" fill="none">
+        <path d="M8 21C4 21 2 17.5 2 15 L2 6 C2 3.5 3.5 2 6 2 C8.5 2 10 3.5 10 6 L10 14 C10 15.5 9 16.5 7.5 16.5 C6 16.5 5 15.5 5 14 L5 7" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- Center content -->
+    <div class="relative z-10 max-w-xl mx-auto text-center px-6">
+
+      <!-- Label -->
+      <div class="mb-3">
+        <span class="text-[11px] font-medium text-[#0098f2] border-b border-[#0098f2] pb-0.5 tracking-wide">Invoice software</span>
+      </div>
+
+      <!-- Heading -->
+      <h1 class="text-[2.75rem] font-bold text-[#1e1e1e] leading-[1.12] mb-4">
+        Small business invoices<br>that get paid faster
+      </h1>
+
+      <!-- Subtext -->
+      <p class="text-[13px] text-[#666] mb-6 max-w-xs mx-auto leading-relaxed">
+        You get paid on time with invoices that work the way you actually use them — not the way accounting tools were designed.
+      </p>
+
+      <!-- CTA -->
+      <a href="#" class="inline-block bg-[#1e1e1e] text-white text-[13px] font-semibold px-5 py-2.5 rounded-lg mb-6">
+        Send my first invoice
+      </a>
+
+      <!-- Stats badges -->
+      <div class="flex items-center justify-center gap-6 mb-10 flex-wrap">
+        <div class="flex items-center gap-1.5 text-[11px] text-[#666]">
+          <span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#0098f229]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#0098f2]"></span>
+          </span>
+          Loved 2.1k+ ★ 4.9
+        </div>
+        <div class="flex items-center gap-1.5 text-[11px] text-[#666]">
+          <span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#f200c929]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#f200ca]"></span>
+          </span>
+          Bank accounts 5+
+        </div>
+        <div class="flex items-center gap-1.5 text-[11px] text-[#666]">
+          <span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#6c55fc29]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#6c56fc]"></span>
+          </span>
+          Stablecoins 11+
+        </div>
+      </div>
+
+      <!-- Invoice mockup cards -->
+      <div class="relative flex justify-center items-start" style="height:240px; overflow:visible;">
+        <!-- Left card (partially visible) -->
+        <div class="bg-white rounded-2xl shadow-md p-4 w-44 absolute" style="left:calc(50% - 230px); top:24px; transform:rotate(-1.5deg); opacity:0.75; z-index:1;">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="w-6 h-6 rounded-full bg-[#0098f229] flex items-center justify-center flex-shrink-0">
+              <div class="w-2.5 h-2.5 rounded-full bg-[#0098f2]"></div>
+            </div>
+            <p class="text-[11px] font-semibold text-[#1e1e1e]">Marble Studio</p>
+          </div>
+          <div class="space-y-1 mb-3">
+            <div class="h-1.5 bg-[#f0f4f8] rounded w-full"></div>
+            <div class="h-1.5 bg-[#f0f4f8] rounded w-4/5"></div>
+            <div class="h-1.5 bg-[#f0f4f8] rounded w-full"></div>
+          </div>
+          <div class="flex justify-between items-center pt-2 border-t border-[#f0f4f8]">
+            <span class="text-[9px] text-[#8d8d8d]">Total</span>
+            <span class="text-[10px] font-bold">$1,200.00</span>
+          </div>
+        </div>
+
+        <!-- Center card (main) -->
+        <div class="bg-white rounded-2xl shadow-xl p-5 w-52 absolute" style="left:calc(50% - 104px); top:0; z-index:10;">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-7 h-7 rounded-full bg-[#f200c929] flex items-center justify-center flex-shrink-0">
+              <div class="w-3 h-3 rounded-full bg-[#f200ca]"></div>
+            </div>
+            <p class="text-[12px] font-semibold text-[#1e1e1e]">Charm AI</p>
+          </div>
+          <div class="space-y-1.5 mb-3">
+            <div class="h-1.5 bg-[#f0f4f8] rounded w-full"></div>
+            <div class="h-1.5 bg-[#f0f4f8] rounded w-5/6"></div>
+            <div class="h-1.5 bg-[#f0f4f8] rounded w-full"></div>
+            <div class="h-1.5 bg-[#f0f4f8] rounded w-2/3"></div>
+          </div>
+          <div class="flex justify-between items-center pt-2 border-t border-[#f0f4f8] mb-3">
+            <span class="text-[10px] text-[#8d8d8d]">Total due</span>
+            <span class="text-[12px] font-bold text-[#1e1e1e]">$2,400.00</span>
+          </div>
+          <div class="h-7 bg-[#1e1e1e] rounded-lg flex items-center justify-center">
+            <span class="text-[10px] text-white font-semibold">Pay invoice</span>
+          </div>
+        </div>
+
+        <!-- Right card (partially visible) -->
+        <div class="bg-white rounded-2xl shadow-md p-4 w-44 absolute" style="right:calc(50% - 230px); top:32px; transform:rotate(1.5deg); opacity:0.65; z-index:1;">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="w-6 h-6 rounded-full bg-[#6c55fc29] flex items-center justify-center flex-shrink-0">
+              <div class="w-2.5 h-2.5 rounded-full bg-[#6c56fc]"></div>
+            </div>
+            <p class="text-[11px] font-semibold text-[#1e1e1e]">Mt Creative</p>
+          </div>
+          <div class="space-y-1">
+            <div class="h-1.5 bg-[#f0f4f8] rounded w-full"></div>
+            <div class="h-1.5 bg-[#f0f4f8] rounded w-3/4"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social proof -->
+      <p class="text-[11px] text-[#8d8d8d] mt-6 pb-16">Loved by 5,000+ businesses &amp; freelancers</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       QUOTE
+  ═══════════════════════════════════════════ -->
+  <section class="bg-[#f7fafc] px-6 py-16">
+    <div class="max-w-2xl mx-auto">
+      <div class="bg-white rounded-2xl px-12 py-10 text-center shadow-sm border border-[#eef2f6]">
+        <div class="flex justify-center gap-0.5 mb-5">
+          <span class="star text-xl">★</span>
+          <span class="star text-xl">★</span>
+          <span class="star text-xl">★</span>
+          <span class="star text-xl">★</span>
+          <span class="star text-xl">★</span>
+        </div>
+        <blockquote class="text-[1.25rem] font-semibold text-[#1e1e1e] leading-snug mb-5">
+          "Acctual makes invoices so easy. One click and 30 minutes later we get paid!"
+        </blockquote>
+        <p class="text-[12px] text-[#8d8d8d]">
+          <span class="font-medium text-[#1e1e1e]">Harriet Norris</span>, founder at Pivot Table
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WE DESIGNED AN INVOICE
+  ═══════════════════════════════════════════ -->
+  <section class="bg-[#f7fafc] px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-10">
+        <span class="text-[11px] font-medium text-[#0098f2] border-b border-[#0098f2] pb-0.5 tracking-wide">For every business</span>
+      </div>
+      <h2 class="text-[2rem] font-bold text-[#1e1e1e] text-center leading-tight mb-10">
+        We<br>designed<br>an invoice<br>that works<br>harder for<br>your<br>business
+      </h2>
+
+      <!-- Category grid -->
+      <div class="grid grid-cols-3 border border-[#e8edf2] rounded-xl overflow-hidden">
+        <div class="bg-white p-5 border-b border-r border-[#e8edf2]">
+          <div class="w-7 h-7 rounded-md bg-[#0098f229] flex items-center justify-center mb-3">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="4.5" r="2.5" stroke="#0098f2" stroke-width="1.4"/><path d="M1.5 13C1.5 10 4 8 7 8s5.5 2 5.5 5" stroke="#0098f2" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+          <p class="text-[12px] font-semibold text-[#1e1e1e] mb-1.5">Freelancers</p>
+          <p class="text-[11px] text-[#666] leading-relaxed">Keep up with your projects and create professional invoices quickly with automated reminders.</p>
+        </div>
+        <div class="bg-white p-5 border-b border-r border-[#e8edf2]">
+          <div class="w-7 h-7 rounded-md bg-[#f200c929] flex items-center justify-center mb-3">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="5" width="12" height="8" rx="1.5" stroke="#f200ca" stroke-width="1.4"/><path d="M4 5V3.5a3 3 0 016 0V5" stroke="#f200ca" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+          <p class="text-[12px] font-semibold text-[#1e1e1e] mb-1.5">Agencies</p>
+          <p class="text-[11px] text-[#666] leading-relaxed">Work with all your clients and help them with a clear payment flow tied to growth milestones.</p>
+        </div>
+        <div class="bg-white p-5 border-b border-[#e8edf2]">
+          <div class="w-7 h-7 rounded-md bg-[#6c55fc29] flex items-center justify-center mb-3">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1.5v11M4 4l3-2.5L10 4M3 10h8" stroke="#6c56fc" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <p class="text-[12px] font-semibold text-[#1e1e1e] mb-1.5">Consultants</p>
+          <p class="text-[11px] text-[#666] leading-relaxed">Trigger payment on milestones and give clients choice of how to pay each engagement.</p>
+        </div>
+        <div class="bg-white p-5 border-r border-[#e8edf2]">
+          <div class="w-7 h-7 rounded-md bg-[#5d9c0629] flex items-center justify-center mb-3">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="2.5" width="12" height="9" rx="1.5" stroke="#5d9c06" stroke-width="1.4"/><path d="M4.5 5.5h5M4.5 8h3" stroke="#5d9c06" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+          <p class="text-[12px] font-semibold text-[#1e1e1e] mb-1.5">Contractors</p>
+          <p class="text-[11px] text-[#666] leading-relaxed">Stay on top of jobs and handle bigger project work with milestone-based payment schedules.</p>
+        </div>
+        <div class="bg-white p-5 border-r border-[#e8edf2]">
+          <div class="w-7 h-7 rounded-md bg-[#0098f229] flex items-center justify-center mb-3">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 2h1.5l2 7h7l1.5-5H5" stroke="#0098f2" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="12" r="1" fill="#0098f2"/><circle cx="11" cy="12" r="1" fill="#0098f2"/></svg>
+          </div>
+          <p class="text-[12px] font-semibold text-[#1e1e1e] mb-1.5">eCommerce</p>
+          <p class="text-[11px] text-[#666] leading-relaxed">Track your inventory on the invoicing side so clients never receive incorrect orders or notices.</p>
+        </div>
+        <div class="bg-white p-5">
+          <div class="w-7 h-7 rounded-md bg-[#6c55fc29] flex items-center justify-center mb-3">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="#6c56fc" stroke-width="1.4"/><ellipse cx="7" cy="7" rx="2.5" ry="5.5" stroke="#6c56fc" stroke-width="1.4"/><path d="M1.5 7h11" stroke="#6c56fc" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+          <p class="text-[12px] font-semibold text-[#1e1e1e] mb-1.5">Cross-border</p>
+          <p class="text-[11px] text-[#666] leading-relaxed">Reach clients globally and still get paid in your local currency without expensive FX fees.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ACCOUNTING PLATFORMS ARE SLOW
+  ═══════════════════════════════════════════ -->
+  <section class="bg-[#f7fafc] px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-[1.75rem] font-bold text-[#1e1e1e] leading-snug mb-10">
+        Accounting platforms are a slow,<br>expensive way to invoice clients
+      </h2>
+
+      <div class="grid grid-cols-3 gap-8 mb-8">
+        <div>
+          <span class="inline-block text-[11px] font-semibold text-[#0098f2] bg-[#0098f229] px-2 py-0.5 rounded-full mb-3">Slow</span>
+          <p class="text-[12px] text-[#666] leading-relaxed">Your clients want more payment methods. You only get bank transfer from your slow account or wallet.</p>
+        </div>
+        <div>
+          <span class="inline-block text-[11px] font-semibold text-[#f200ca] bg-[#f200c929] px-2 py-0.5 rounded-full mb-3">Expensive</span>
+          <p class="text-[12px] text-[#666] leading-relaxed">You pay a monthly subscription — <span class="text-[#1e1e1e]">for each</span> seat, every feature and every account on top.</p>
+        </div>
+        <div>
+          <span class="inline-block text-[11px] font-semibold text-[#6c56fc] bg-[#6c55fc29] px-2 py-0.5 rounded-full mb-3">Confusing</span>
+          <p class="text-[12px] text-[#666] leading-relaxed">You make a single invoice system — <span class="text-[#0098f2] cursor-pointer">it's</span> bolted onto a larger accounting platform you don't use.</p>
+        </div>
+      </div>
+
+      <!-- Colored illustration cards -->
+      <div class="grid grid-cols-3 gap-4">
+        <!-- Blue card -->
+        <div class="h-44 bg-[#dceeff] rounded-2xl overflow-hidden relative flex items-end justify-center pb-0">
+          <svg viewBox="0 0 160 100" class="absolute bottom-0 left-0 right-0 w-full" style="height:80px;">
+            <ellipse cx="80" cy="100" rx="68" ry="52" fill="#0098f2" fill-opacity="0.22"/>
+            <rect x="46" y="30" width="68" height="70" rx="8" fill="white" fill-opacity="0.7"/>
+            <rect x="54" y="42" width="52" height="5" rx="2" fill="#0098f2" fill-opacity="0.3"/>
+            <rect x="54" y="52" width="38" height="4" rx="2" fill="#0098f2" fill-opacity="0.2"/>
+            <rect x="54" y="61" width="46" height="4" rx="2" fill="#0098f2" fill-opacity="0.2"/>
+          </svg>
+        </div>
+        <!-- Pink card -->
+        <div class="h-44 bg-[#fce7f8] rounded-2xl overflow-hidden relative flex items-end justify-center pb-0">
+          <svg viewBox="0 0 160 100" class="absolute bottom-0 left-0 right-0 w-full" style="height:80px;">
+            <ellipse cx="80" cy="100" rx="68" ry="52" fill="#f200ca" fill-opacity="0.17"/>
+            <rect x="46" y="30" width="68" height="70" rx="8" fill="white" fill-opacity="0.7"/>
+            <rect x="54" y="42" width="52" height="5" rx="2" fill="#f200ca" fill-opacity="0.3"/>
+            <rect x="54" y="52" width="38" height="4" rx="2" fill="#f200ca" fill-opacity="0.2"/>
+            <rect x="54" y="61" width="46" height="4" rx="2" fill="#f200ca" fill-opacity="0.2"/>
+          </svg>
+        </div>
+        <!-- Purple card -->
+        <div class="h-44 bg-[#ece9ff] rounded-2xl overflow-hidden relative flex items-end justify-center pb-0">
+          <svg viewBox="0 0 160 100" class="absolute bottom-0 left-0 right-0 w-full" style="height:80px;">
+            <ellipse cx="80" cy="100" rx="68" ry="52" fill="#6c56fc" fill-opacity="0.17"/>
+            <rect x="46" y="30" width="68" height="70" rx="8" fill="white" fill-opacity="0.7"/>
+            <rect x="54" y="42" width="52" height="5" rx="2" fill="#6c56fc" fill-opacity="0.3"/>
+            <rect x="54" y="52" width="38" height="4" rx="2" fill="#6c56fc" fill-opacity="0.2"/>
+            <rect x="54" y="61" width="46" height="4" rx="2" fill="#6c56fc" fill-opacity="0.2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SAME DAY PAYMENTS. NO SUBSCRIPTION.
+  ═══════════════════════════════════════════ -->
+  <section class="bg-[#f7fafc] px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-[1.75rem] font-bold text-[#1e1e1e] mb-2 leading-tight">Same day payments.<br>No subscription.</h2>
+      <p class="text-[13px] text-[#666] mb-10 max-w-lg leading-relaxed">
+        Acctual offers more payment methods and no monthly fees. <span class="text-[#0098f2] underline cursor-pointer">Same-day incoming invoices</span> and get to your bank account or wallet.
+      </p>
+
+      <div class="grid grid-cols-3 gap-x-8 gap-y-7 mb-10">
+        <div>
+          <p class="text-[12px] font-semibold text-[#1e1e1e] mb-1">The industry's lowest transfer fees</p>
+        </div>
+        <div>
+          <p class="text-[12px] font-semibold text-[#1e1e1e] mb-1">Payment via card, bank transfer or stablecoin</p>
+        </div>
+        <div>
+          <p class="text-[12px] font-semibold text-[#1e1e1e] mb-1">Same-day payments in your favorite currency</p>
+        </div>
+        <div>
+          <p class="text-[12px] font-semibold text-[#1e1e1e] mb-1">Direct payment to your bank account or wallet</p>
+        </div>
+        <div>
+          <p class="text-[12px] font-semibold text-[#1e1e1e] mb-1">Unlimited invoices and no subscription fees</p>
+        </div>
+        <div>
+          <p class="text-[12px] font-semibold text-[#1e1e1e] mb-1">Invoice sync with Xero and QuickBooks</p>
+        </div>
+      </div>
+
+      <a href="#" class="inline-block bg-[#1e1e1e] text-white text-[13px] font-semibold px-5 py-2.5 rounded-lg">
+        Create an invoice
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FASTER INVOICE EXPERIENCE
+  ═══════════════════════════════════════════ -->
+  <section class="bg-[#f7fafc] px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-[1.6rem] font-bold text-[#1e1e1e] mb-8 leading-snug">We designed a faster invoice<br>experience with lower fees</h2>
+      <div class="grid grid-cols-2 gap-12">
+        <div>
+          <p class="text-[14px] font-semibold text-[#1e1e1e] leading-snug">Create a beautiful invoice without hiring a professional designer</p>
+        </div>
+        <div>
+          <p class="text-[12px] text-[#666] leading-relaxed">
+            Your clients deserve a great payment experience. Acctual invoice templates send with speed, are completely on-brand, and convert at a higher rate than traditional accounting platforms.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FEATURE SHOWCASE (invoice builder screenshot)
+  ═══════════════════════════════════════════ -->
+  <section class="bg-[#f7fafc] px-6 py-10">
+    <div class="max-w-3xl mx-auto">
+      <!-- Invoice builder mockup -->
+      <div class="bg-white border border-[#e8edf2] rounded-2xl shadow-sm overflow-hidden" style="height:380px;">
+        <div class="bg-[#fafafa] border-b border-[#e8edf2] px-5 py-3 flex items-center gap-3">
+          <div class="w-2.5 h-2.5 rounded-full bg-[#ff6363] opacity-60"></div>
+          <div class="w-2.5 h-2.5 rounded-full bg-[#f5a623] opacity-60"></div>
+          <div class="w-2.5 h-2.5 rounded-full bg-[#5d9c06] opacity-60"></div>
+          <div class="flex-1 flex justify-center">
+            <div class="h-5 w-48 bg-[#f0f4f8] rounded-md"></div>
+          </div>
+        </div>
+        <div class="flex h-full">
+          <!-- Left nav -->
+          <div class="w-44 border-r border-[#f0f4f8] p-4 space-y-2 bg-white">
+            <div class="h-6 bg-[#f0f4f8] rounded w-3/4"></div>
+            <div class="h-6 bg-[#0098f229] rounded w-full flex items-center px-2">
+              <div class="w-2 h-2 rounded-full bg-[#0098f2] mr-2"></div>
+              <div class="h-2 bg-[#0098f2] opacity-30 rounded flex-1"></div>
+            </div>
+            <div class="h-6 bg-[#f0f4f8] rounded w-full"></div>
+            <div class="h-6 bg-[#f0f4f8] rounded w-2/3"></div>
+            <div class="h-6 bg-[#f0f4f8] rounded w-full"></div>
+          </div>
+          <!-- Main invoice area -->
+          <div class="flex-1 p-6 flex gap-4">
+            <div class="flex-1 space-y-3">
+              <div class="h-4 bg-[#f0f4f8] rounded w-1/3"></div>
+              <div class="h-4 bg-[#f0f4f8] rounded w-2/3"></div>
+              <div class="border border-[#e8edf2] rounded-xl p-4 space-y-2 mt-4">
+                <div class="h-3 bg-[#f0f4f8] rounded w-full"></div>
+                <div class="h-3 bg-[#f0f4f8] rounded w-3/4"></div>
+                <div class="h-3 bg-[#f0f4f8] rounded w-full"></div>
+                <div class="h-px bg-[#e8edf2]"></div>
+                <div class="flex justify-between">
+                  <div class="h-3 bg-[#f0f4f8] rounded w-16"></div>
+                  <div class="h-3 bg-[#1e1e1e] opacity-20 rounded w-20"></div>
+                </div>
+              </div>
+              <div class="flex gap-2 mt-4">
+                <div class="h-7 flex-1 bg-[#1e1e1e] rounded-lg opacity-90"></div>
+                <div class="h-7 w-20 bg-[#f0f4f8] rounded-lg"></div>
+              </div>
+            </div>
+            <!-- Preview panel -->
+            <div class="w-40 border border-[#e8edf2] rounded-xl p-3 space-y-2 bg-[#fafafa]">
+              <div class="h-2.5 bg-[#e8edf2] rounded w-full"></div>
+              <div class="h-2.5 bg-[#e8edf2] rounded w-4/5"></div>
+              <div class="h-2.5 bg-[#e8edf2] rounded w-full"></div>
+              <div class="h-2.5 bg-[#e8edf2] rounded w-2/3"></div>
+              <div class="h-px bg-[#e8edf2] my-1"></div>
+              <div class="h-2.5 bg-[#0098f2] rounded w-3/4 opacity-40"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIAL 1
+  ═══════════════════════════════════════════ -->
+  <section class="bg-[#f7fafc] px-6 pt-12 pb-4">
+    <div class="max-w-3xl mx-auto">
+      <div class="flex gap-0.5 mb-2">
+        <span class="star text-[13px]">★</span>
+        <span class="star text-[13px]">★</span>
+        <span class="star text-[13px]">★</span>
+        <span class="star text-[13px]">★</span>
+        <span class="star text-[13px]">★</span>
+      </div>
+      <blockquote class="text-[13px] font-medium text-[#1e1e1e] mb-1.5 max-w-sm leading-snug">
+        "I used to always move money at Figma. Now I can share a beautiful invoice with any client in Acctual."
+      </blockquote>
+      <p class="text-[11px] text-[#8d8d8d]">Jay N. — Figma</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SEND ONE PAYMENT LINK
+  ═══════════════════════════════════════════ -->
+  <section class="bg-[#f7fafc] px-6 py-12">
+    <div class="max-w-3xl mx-auto grid grid-cols-2 gap-12 items-start">
+      <div>
+        <h3 class="text-[1.35rem] font-bold text-[#1e1e1e] leading-snug">Send one payment link that offers every method and lowers your fees</h3>
+      </div>
+      <div>
+        <p class="text-[12px] text-[#666] leading-relaxed">
+          You don't need to juggle payment platforms. One Acctual invoice is a payment link you share with your client — they click on it, choose how they want to pay with credit card, bank transfer, SEPA, wire, BTC/USDT/USDC, stablecoin like EURC or Tron. Then in Acctual it lands in which bank you prefer.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       APP SCREENSHOT
+  ═══════════════════════════════════════════ -->
+  <section class="bg-[#f7fafc] px-6 py-6">
+    <div class="max-w-2xl mx-auto">
+      <div class="bg-[#1e1e1e] rounded-2xl overflow-hidden shadow-2xl" style="height:300px; position:relative;">
+        <div class="absolute inset-0 p-5 flex flex-col">
+          <div class="flex gap-1.5 mb-5">
+            <div class="w-2.5 h-2.5 rounded-full bg-[#ff636360]"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-[#f5a62360]"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-[#5d9c0660]"></div>
+          </div>
+          <div class="flex-1 flex gap-4">
+            <div class="w-36 space-y-2">
+              <div class="h-5 bg-white opacity-[0.07] rounded"></div>
+              <div class="h-5 bg-white opacity-[0.07] rounded w-3/4"></div>
+              <div class="h-5 bg-white opacity-[0.07] rounded"></div>
+              <div class="h-5 bg-white opacity-[0.07] rounded w-2/3"></div>
+              <div class="h-5 bg-white opacity-[0.07] rounded"></div>
+            </div>
+            <div class="flex-1 bg-white opacity-[0.04] rounded-xl"></div>
+          </div>
+        </div>
+        <div class="absolute bottom-8 left-0 right-0 flex justify-center">
+          <div class="bg-[#0098f2] text-white text-[13px] font-semibold px-6 py-2.5 rounded-lg shadow-lg">
+            Get paid with Acctual
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIAL 2
+  ═══════════════════════════════════════════ -->
+  <section class="bg-[#f7fafc] px-6 pt-12 pb-4">
+    <div class="max-w-3xl mx-auto">
+      <div class="flex gap-0.5 mb-2">
+        <span class="star text-[13px]">★</span>
+        <span class="star text-[13px]">★</span>
+        <span class="star text-[13px]">★</span>
+        <span class="star text-[13px]">★</span>
+        <span class="star text-[13px]">★</span>
+      </div>
+      <blockquote class="text-[13px] font-medium text-[#1e1e1e] mb-1.5 max-w-sm leading-snug">
+        "Our workflow is faster and more accurate thanks to Acctual. Payments are always under our number already open if customers switch from Web to crypto."
+      </blockquote>
+      <p class="text-[11px] text-[#8d8d8d]">Tom K. — Acme</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SAME DAY PAYOUTS
+  ═══════════════════════════════════════════ -->
+  <section class="bg-[#f7fafc] px-6 py-12">
+    <div class="max-w-3xl mx-auto grid grid-cols-2 gap-12 items-start">
+      <div>
+        <h3 class="text-[1.35rem] font-bold text-[#1e1e1e] leading-snug">
+          Get same day payouts, sent directly to your <span class="underline decoration-[#1e1e1e]">bank account or wallet.</span> Accepting payments across 18,000+ financial institutions.
+        </h3>
+      </div>
+      <div>
+        <p class="text-[12px] text-[#666] leading-relaxed">
+          Don't let banks and accounting platforms hold your money hostage. We use a specialized payment rail (actual wire, not a slow ACH) that processes payments instantly. It works to your standard bank account, and to your crypto wallet.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIAL 3
+  ═══════════════════════════════════════════ -->
+  <section class="bg-[#f7fafc] px-6 pt-12 pb-4">
+    <div class="max-w-3xl mx-auto">
+      <div class="flex gap-0.5 mb-2">
+        <span class="star text-[13px]">★</span>
+        <span class="star text-[13px]">★</span>
+        <span class="star text-[13px]">★</span>
+        <span class="star text-[13px]">★</span>
+        <span class="star text-[13px]">★</span>
+      </div>
+      <blockquote class="text-[13px] font-medium text-[#1e1e1e] mb-1.5 max-w-sm leading-snug">
+        "Outstanding money comes within same-second payouts via USDC. Done exactly. It felt so great."
+      </blockquote>
+      <p class="text-[11px] text-[#8d8d8d]">Sam R. — Stripe</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CHASE PAYMENTS
+  ═══════════════════════════════════════════ -->
+  <section class="bg-[#f7fafc] px-6 py-12">
+    <div class="max-w-3xl mx-auto grid grid-cols-2 gap-12 items-start">
+      <div>
+        <p class="text-[12px] text-[#0098f2] leading-relaxed cursor-pointer">
+          An in-app payment scheduling component. We can invoice your clients on a recurring schedule and send gentle reminders if they're late.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-[1.35rem] font-bold text-[#1e1e1e] leading-snug">Chase payments with automatic nudges, not awkward emails</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIAL 4
+  ═══════════════════════════════════════════ -->
+  <section class="bg-[#f7fafc] px-6 pt-12 pb-20">
+    <div class="max-w-3xl mx-auto">
+      <div class="flex gap-0.5 mb-2">
+        <span class="star text-[13px]">★</span>
+        <span class="star text-[13px]">★</span>
+        <span class="star text-[13px]">★</span>
+        <span class="star text-[13px]">★</span>
+        <span class="star text-[13px]">★</span>
+      </div>
+      <blockquote class="text-[13px] font-medium text-[#1e1e1e] mb-1.5 max-w-sm leading-snug">
+        "It's easy for chased customers and loved their payment settings. Now I can send any invoice with every option and get paid."
+      </blockquote>
+      <p class="text-[11px] text-[#8d8d8d]">Robin L. — Freelancer</p>
+    </div>
+  </section>
+
+</body>
+</html>

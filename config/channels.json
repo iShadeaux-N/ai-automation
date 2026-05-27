@@ -1,0 +1,86 @@
+{
+  "claude_model": "claude-sonnet-4-6",
+
+  "tiktok": {
+    "brand_name": "FitDrop",
+    "niche": "clothing",
+    "target_audience": "Women and men 18-35, fashion-conscious, TikTok-native shoppers",
+    "posting_frequency_per_day": 2,
+    "best_post_times": ["7:00 AM", "12:00 PM", "7:00 PM"],
+    "products": [
+      {
+        "name": "Ekko Tank Top",
+        "affiliate_link": "REPLACE_WITH_TIKTOK_SHOP_AFFILIATE_LINK",
+        "price_range": "$20-$35",
+        "key_hooks": [
+          "This tank actually fits AND looks good — here's why",
+          "I've worn this every day this week and here's why",
+          "POV: you finally found a basic that isn't boring"
+        ]
+      },
+      {
+        "name": "Sweat Shorts",
+        "affiliate_link": "REPLACE_WITH_TIKTOK_SHOP_AFFILIATE_LINK",
+        "price_range": "$25-$40",
+        "key_hooks": [
+          "These sweat shorts are on every GRWM right now — here's why",
+          "The most comfortable shorts I've ever worn, period",
+          "3 ways to style sweat shorts that actually look intentional"
+        ]
+      }
+    ],
+    "disclosure_caption": "This is an affiliate link — I earn a small commission if you buy. My opinion is always honest ✌️",
+    "default_hashtags": [
+      "#TikTokMadeMeBuyIt",
+      "#ad",
+      "#AffiliateLink",
+      "#FitCheck",
+      "#OutfitInspo",
+      "#FashionTikTok",
+      "#GRWM",
+      "#StyleTips",
+      "#TikTokShop",
+      "#EkkoTank",
+      "#SweatShorts"
+    ],
+    "pivot_threshold": {
+      "min_avg_views_per_video": 500,
+      "min_shop_ctr_percent": 2.0,
+      "evaluation_after_n_posts": 20,
+      "evaluation_after_days": 30
+    }
+  },
+
+  "youtube": {
+    "channel_name": "Dread Files",
+    "tagline": "True stories. AI narrated. Sleep optional.",
+    "niche": "AI scary stories",
+    "tone": "slow-burn dread",
+    "target_audience": "Horror fans 18-45, true crime adjacent, late-night YouTube watchers",
+    "posting_frequency_per_week": 4,
+    "best_upload_days": ["Tuesday", "Thursday", "Saturday", "Sunday"],
+    "best_upload_time": "6:00 PM",
+    "elevenlabs_voice": {
+      "voice_id": "Adam",
+      "speed": 0.90,
+      "stability": 75,
+      "clarity": 80,
+      "style_exaggeration": 15,
+      "notes": "Add slight reverb in post. Calm, measured delivery — no dramatic emphasis."
+    },
+    "monetization": {
+      "day_1": "Amazon Associates + TikTok Shop affiliate links in descriptions",
+      "milestone_adsense": "1000 subscribers + 4000 watch hours",
+      "estimated_timeline_months": 3,
+      "after_monetization": ["YouTube AdSense", "Sponsorships", "Patreon", "Merch"]
+    },
+    "ctr_benchmark_percent": 8.0,
+    "avg_view_duration_target_percent": 50,
+    "pivot_threshold": {
+      "min_avg_views_per_video": 1000,
+      "min_subs_per_month": 100,
+      "evaluation_after_days": 30,
+      "evaluation_after_n_videos": 20
+    }
+  }
+}
