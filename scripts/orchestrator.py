@@ -65,7 +65,7 @@ def _step(label: str, dry_run: bool = False) -> None:
 
 
 def run_pipeline(
-    topic: str | None = None,
+    topic=None,
     length: str = "long",
     dry_run: bool = False,
 ) -> dict:
