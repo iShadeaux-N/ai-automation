@@ -59,7 +59,7 @@ def _slug(topic: str) -> str:
     return topic[:40].lower().replace(" ", "-").replace("/", "-")
 
 
-def pick_next_topic(client: anthropic.Anthropic | None = None) -> str:
+def pick_next_topic(client=None) -> str:
     """Return the next un-published topic from the calendar, or generate a new one."""
     published = _get_published_slugs()
     calendar_topics = _extract_calendar_topics()
